@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jonathon Gomes Master — Software Engineer</title>
+  <meta name="description" content="Jonathon Gomes Master — full-stack & mobile developer from Queens, NY building with React, React Native, Node.js, Firebase, Java and C++." />
+  <meta name="theme-color" content="#f6f1e7" />
+  <meta property="og:title" content="Jonathon Gomes Master — Software Engineer" />
+  <meta property="og:description" content="All aboard the Jonathon Line: full-stack & mobile developer from Queens, NY." />
+  <meta property="og:image" content="assets/jonathon.jpg" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23ff5a36'/%3E%3Ctext x='32' y='43' font-family='Arial' font-weight='800' font-size='30' text-anchor='middle' fill='white'%3EJ%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body class="loading">
+  <!-- Loader -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-bars"><i style="--c:var(--coral)"></i><i style="--c:var(--cobalt)"></i><i style="--c:var(--butter)"></i><i style="--c:var(--mint)"></i><i style="--c:var(--lilac-2)"></i></div>
+    <div class="loader-card">
+      <span class="bullet big" style="--c: var(--coral)">J</span>
+      <div>
+        <div class="loader-kicker">The Jonathon Line</div>
+        <div class="loader-msg" id="loaderMsg">Doors closing…</div>
+      </div>
+    </div>
+    <div class="loader-track"><span id="loaderFill"></span></div>
+  </div>
+
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <!-- Top bar -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo" aria-label="Home">
+      <span class="bullet" style="--c: var(--coral)">J</span>
+      <span class="logo-text">Jonathon<span class="logo-sub">Gomes Master</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+      <a href="assets/Jonathon_Gomes_Master_Resume.pdf" class="nav-cta" target="_blank" rel="noopener">Résumé ↗</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <aside class="route" id="route" aria-label="Page stations"></aside>
+
+  <main>
+    <!-- ============ HERO (3D) ============ -->
+    <section id="home" class="hero" data-station="Start" data-color="coral">
+      <div class="container">
+        <div class="hero-content">
+          <div class="boarding hero-in"><span class="pulse"></span> Now boarding · Open to Software Engineering Internships</div>
+          <h1 class="hero-title" aria-label="Jonathon Gomes Master">
+            <span class="line"><span class="chars">Jonathon</span></span>
+            <span class="line"><span class="chars">Gomes</span> <em class="chars">Master</em></span>
+          </h1>
+          <p class="hero-role hero-in">I build <span class="typed" id="typed">cross-platform mobile apps.</span><span class="caret"></span></p>
+          <p class="hero-sub hero-in">
+            Full-stack developer from <b>Queens, NY</b>. CS student at LaGuardia Community College, Full-Stack resident at
+            Tech Talent Pipeline — and a manager promoted in under a year. I ship clean, user-centered apps.
+          </p>
+          <div class="hero-cta hero-in">
+            <a class="btn primary magnetic" href="#projects">Ride to my projects <span class="arrow">→</span></a>
+            <a class="btn ghost magnetic" href="assets/Jonathon_Gomes_Master_Resume.pdf" download>Download résumé ↓</a>
+          </div>
+          <div class="hero-lines hero-in" aria-label="Main technologies">
+            <span class="lines-label">Lines served</span>
+            <span class="bullet" style="--c: var(--coral)" title="Java">J</span>
+            <span class="bullet" style="--c: var(--cobalt)" title="C++">C</span>
+            <span class="bullet" style="--c: var(--butter); --t: var(--ink)" title="JavaScript">JS</span>
+            <span class="bullet" style="--c: #61dafb; --t: var(--ink)" title="React">R</span>
+            <span class="bullet" style="--c: var(--mint); --t: var(--ink)" title="Node.js">N</span>
+            <span class="bullet" style="--c: var(--ink)" title="Firebase">F</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-float hf1 hero-in"><b>4</b><span>apps shipped</span></div>
+      <div class="hero-float hf2 hero-in"><span class="hf-ic">🚀</span><span>Crew → Manager<br /><b>in &lt; 1 year</b></span></div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><span>Scroll to ride</span><i></i></a>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>● NOW BOARDING: SOFTWARE ENGINEERING INTERNSHIPS</span><span>● NEXT STOP: YOUR TEAM</span><span>● JAVA · C++ · JAVASCRIPT · REACT · REACT NATIVE · NODE.JS · FIREBASE</span><span>● SERVICE ORIGINATES IN QUEENS, NY</span>
+        <span>● NOW BOARDING: SOFTWARE ENGINEERING INTERNSHIPS</span><span>● NEXT STOP: YOUR TEAM</span><span>● JAVA · C++ · JAVASCRIPT · REACT · REACT NATIVE · NODE.JS · FIREBASE</span><span>● SERVICE ORIGINATES IN QUEENS, NY</span>
+      </div>
+    </div>
+
+    <!-- ============ ABOUT (cobalt) ============ -->
+    <section id="about" class="panel p-cobalt" data-station="About" data-color="cobalt">
+      <div class="container">
+        <div class="sign reveal"><span class="bullet" style="--c: var(--butter); --t: var(--ink)">1</span><span class="sign-name">Queens Village</span><span class="sign-dir">About me</span></div>
+        <h2 class="title words">A builder from <em>Queens</em>, with a manager's mindset.</h2>
+
+        <div class="about-grid">
+          <div class="photo-wrap reveal">
+            <div class="polaroid" data-tilt>
+              <span class="tape"></span>
+              <img src="assets/jonathon.jpg" alt="Jonathon Gomes Master smiling at a café" />
+              <div class="polaroid-cap">Jonathon · Queens, NY</div>
+            </div>
+            <div class="sticker s1">Hi! 👋</div>
+            <div class="sticker s2">🎓 LaGuardia ’26</div>
+            <div class="sticker s3">🗣️ English · Bangla</div>
+          </div>
+
+          <div class="about-text">
+            <p class="lead reveal">I love turning messy, real-world problems into software that feels <span class="mark">simple and obvious</span>.</p>
+            <p class="reveal">
+              I'm studying Computer Science at LaGuardia Community College and training as a Full-Stack Web Developer in the
+              Tech Talent Pipeline Residency. I've built a cross-platform mobile app for CUNY students, a team habit-tracking web app,
+              a JavaFX ordering system and a C++ banking engine — always with clean architecture and real users in mind.
+            </p>
+            <p class="reveal">
+              Off the keyboard, I was <b>promoted to Manager at McDonald's in under a year</b>. I run shifts, coach crew and track
+              sales and labor metrics — so I stay calm under pressure, communicate clearly and own the outcome.
+            </p>
+            <div class="stats">
+              <div class="stat reveal" style="--c: var(--coral)"><b><span data-count="4">0</span>+</b><span>Apps built end-to-end</span></div>
+              <div class="stat reveal" style="--c: var(--butter)"><b>&lt;<span data-count="1">0</span> yr</b><span>Crew → Manager</span></div>
+              <div class="stat reveal" style="--c: var(--mint)"><b><span data-count="6">0</span></b><span>Person team I shipped with</span></div>
+              <div class="stat reveal" style="--c: var(--lilac)"><b><span data-count="2">0</span></b><span>Spoken languages</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS (butter) ============ -->
+    <section id="skills" class="panel p-butter" data-station="Skills" data-color="butter">
+      <div class="container">
+        <div class="sign reveal"><span class="bullet" style="--c: var(--mint); --t: var(--ink)">2</span><span class="sign-name">Skill Junction</span><span class="sign-dir">Tech stack</span></div>
+        <h2 class="title words">The tools I <em>ride</em> with.</h2>
+
+        <div class="routes reveal">
+          <div class="route-row" style="--c: var(--coral)">
+            <div class="route-name"><span class="bullet" style="--c: var(--coral)">L</span>Languages</div>
+            <div class="stops"><span>Java</span><span>C++</span><span>JavaScript</span><span>HTML &amp; CSS</span></div>
+          </div>
+          <div class="route-row" style="--c: #61dafb">
+            <div class="route-name"><span class="bullet" style="--c: #61dafb; --t: var(--ink)">F</span>Frameworks</div>
+            <div class="stops"><span>React</span><span>React Native</span><span>Node.js</span><span>Express</span><span>JavaFX</span><span>Vite</span></div>
+          </div>
+          <div class="route-row" style="--c: var(--mint)">
+            <div class="route-name"><span class="bullet" style="--c: var(--mint); --t: var(--ink)">T</span>Tools &amp; APIs</div>
+            <div class="stops"><span>Firebase</span><span>GitHub</span><span>AI APIs</span><span>Blackboard API</span><span>REST APIs</span></div>
+          </div>
+          <div class="route-row" style="--c: var(--lilac-2)">
+            <div class="route-name"><span class="bullet" style="--c: var(--lilac-2); --t: var(--ink)">S</span>Strengths</div>
+            <div class="stops"><span>Clean architecture</span><span>OOP</span><span>User-centered design</span><span>Teamwork</span><span>Leadership</span></div>
+          </div>
+          <div class="route-row" style="--c: var(--butter)">
+            <div class="route-name"><span class="bullet" style="--c: var(--butter); --t: var(--ink)">B</span>Spoken</div>
+            <div class="stops"><span>English</span><span>Bangla</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS (lilac) ============ -->
+    <section id="projects" class="panel p-lilac" data-station="Projects" data-color="lilac-2">
+      <div class="container">
+        <div class="sign reveal"><span class="bullet" style="--c: var(--coral)">3</span><span class="sign-name">Project Yard</span><span class="sign-dir">Selected work</span></div>
+        <h2 class="title words">Things I've <em>shipped</em>.</h2>
+
+        <div class="projects">
+          <!-- CUNYConnect -->
+          <article class="project featured reveal" data-tilt>
+            <div class="p-visual v-cobalt">
+              <div class="phone">
+                <div class="notch"></div>
+                <div class="app">
+                  <div class="app-top"><b>CUNYConnect</b><span class="avatar"></span></div>
+                  <div class="app-search">🔍 Search jobs, events, courses…</div>
+                  <div class="app-card ai"><span>✨ AI Advisor</span><small>“Take CSC 201 next semester to stay on track.”</small></div>
+                  <div class="app-row"><div><b>12</b><small>Jobs</small></div><div><b>5</b><small>Events</small></div><div><b>4</b><small>Courses</small></div></div>
+                  <div class="app-card"><span>📚 Blackboard sync</span><small>Assignment due Fri · CSC 210</small></div>
+                  <div class="app-card"><span>💼 Software Intern</span><small>Hiring · 0.8 mi from campus</small></div>
+                </div>
+              </div>
+              <span class="float-tag t1">Firebase real-time ⚡</span>
+              <span class="float-tag t2">AI advising 🤖</span>
+            </div>
+            <div class="p-body">
+              <div class="p-meta"><span class="bullet sm" style="--c: var(--cobalt)">C</span><span>Mobile · Full-stack · AI</span><span class="p-date">June 2025</span></div>
+              <h3>CUNYConnect</h3>
+              <p class="p-desc">An all-in-one mobile app that helps CUNY students manage academics, discover jobs and connect with campus resources.</p>
+              <ul>
+                <li>Designed and built a cross-platform app for students across <b>all CUNY campuses</b>.</li>
+                <li>Implemented authentication, <b>AI-powered academic advising</b> and job/event listings with search &amp; filtering.</li>
+                <li>Integrated the <b>Blackboard API</b> and architected real-time Firebase data sync.</li>
+              </ul>
+              <div class="chips"><span>React Native</span><span>Node.js</span><span>Firebase</span><span>AI APIs</span><span>Blackboard API</span></div>
+              <a class="p-link" href="https://github.com/Jonathon10" target="_blank" rel="noopener">View on GitHub <span>↗</span></a>
+            </div>
+          </article>
+
+          <!-- Habit Tracker -->
+          <article class="project reveal" data-tilt>
+            <div class="p-visual v-mint">
+              <div class="habit" id="habitMock">
+                <div class="h-top">
+                  <div><b>Habit Tracker</b><small>“Small steps, every day.”</small></div>
+                  <div class="ring" style="--p: 75"><span>75%</span></div>
+                </div>
+                <div class="h-streak"><span>🔥 <b>12</b>-day streak</span><span>🏆 Best <b>21</b></span></div>
+                <ul class="h-list">
+                  <li class="done"><i></i>💧 Water intake</li>
+                  <li class="done"><i></i>🏋️ Gym</li>
+                  <li><i></i>📖 Reading</li>
+                  <li class="done"><i></i>💻 Coding practice</li>
+                </ul>
+                <div class="h-cal" aria-hidden="true"></div>
+              </div>
+            </div>
+            <div class="p-body">
+              <div class="p-meta"><span class="bullet sm" style="--c: var(--mint); --t: var(--ink)">H</span><span>Web app · Team of 6</span><span class="p-date">June 2026</span></div>
+              <h3>Habit Tracker</h3>
+              <p class="p-desc">A capstone web app that helps people build good habits — with accounts, streaks, a progress calendar and a daily motivational quote.</p>
+              <ul>
+                <li>Sign-in / register flow backed by a <b>Node.js + Express</b> API, with per-user habit lists.</li>
+                <li>Current &amp; longest <b>streak tracking</b>, one-click presets and today's completion %.</li>
+                <li>Month <b>calendar heat-map</b>, daily quote endpoint, fully responsive layout.</li>
+              </ul>
+              <div class="chips"><span>React 19</span><span>Vite</span><span>Node.js</span><span>Express</span><span>REST API</span></div>
+              <a class="p-link" href="https://github.com/Jonathon10/HABIT_TRACKER" target="_blank" rel="noopener">View on GitHub <span>↗</span></a>
+            </div>
+          </article>
+
+          <!-- Pizzeria -->
+          <article class="project reveal" data-tilt>
+            <div class="p-visual v-coral">
+              <div class="receipt">
+                <div class="r-head">🍕 PIZZERIA<small>ORDER #0427</small></div>
+                <div class="r-line"><span>Large · Thin crust</span><span>$16.99</span></div>
+                <div class="r-line"><span>+ Pepperoni, Mushroom</span><span>$3.00</span></div>
+                <div class="r-line"><span>Garlic knots</span><span>$4.50</span></div>
+                <div class="r-sep"></div>
+                <div class="r-line"><span>Subtotal</span><span>$24.49</span></div>
+                <div class="r-line"><span>Tax 8.875%</span><span>$2.17</span></div>
+                <div class="r-line total"><span>TOTAL</span><span>$26.66</span></div>
+              </div>
+            </div>
+            <div class="p-body">
+              <div class="p-meta"><span class="bullet sm" style="--c: var(--coral)">P</span><span>Desktop GUI · Java</span><span class="p-date">June 2026</span></div>
+              <h3>Pizzeria Ordering App</h3>
+              <p class="p-desc">A JavaFX ordering system that walks users through a custom order, calculates tax and prints an itemized receipt.</p>
+              <ul>
+                <li>Full GUI with dropdowns, radio buttons and checkboxes.</li>
+                <li>Dynamic pricing with <b>8.875% tax</b> and real-time totals.</li>
+                <li>Itemized receipts in the console and a JOptionPane dialog.</li>
+              </ul>
+              <div class="chips"><span>Java</span><span>JavaFX</span><span>OOP</span></div>
+              <a class="p-link" href="https://github.com/Jonathon10/JonKashPizzeria" target="_blank" rel="noopener">View on GitHub <span>↗</span></a>
+            </div>
+          </article>
+
+          <!-- Banking -->
+          <article class="project reveal" data-tilt>
+            <div class="p-visual v-ink">
+              <div class="terminal">
+                <div class="t-bar"><i></i><i></i><i></i><span>bank.exe</span></div>
+                <pre class="t-body" id="termBody"></pre>
+              </div>
+            </div>
+            <div class="p-body">
+              <div class="p-meta"><span class="bullet sm" style="--c: var(--ink)">B</span><span>CLI · Systems · C++</span><span class="p-date">Sept 2025</span></div>
+              <h3>Banking System</h3>
+              <p class="p-desc">A command-line banking app to open accounts, deposit, withdraw and check balances — with built-in error protection.</p>
+              <ul>
+                <li>Menu-driven deposits, withdrawals, inquiries and account management.</li>
+                <li>OOP design combining <b>Customer</b> and <b>Account</b> classes.</li>
+                <li>Validation that blocks overdrafts and invalid transactions.</li>
+              </ul>
+              <div class="chips"><span>C++</span><span>OOP</span><span>Data validation</span></div>
+              <a class="p-link" href="https://github.com/Jonathon10/Code-Project" target="_blank" rel="noopener">View on GitHub <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERLUDE (3D) ============ -->
+    <section class="interlude" aria-hidden="true">
+      <div class="container">
+        <p class="inter-kicker">Next stop</p>
+        <p class="inter-big words">Career <em>Line</em> →</p>
+        <p class="inter-sub">Stand clear of the closing doors, please.</p>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE (coral) ============ -->
+    <section id="experience" class="panel p-coral" data-station="Experience" data-color="coral">
+      <div class="container">
+        <div class="sign reveal"><span class="bullet" style="--c: var(--butter); --t: var(--ink)">4</span><span class="sign-name">Career Line</span><span class="sign-dir">Experience &amp; education</span></div>
+        <h2 class="title words">Where I've <em>been</em>.</h2>
+
+        <div class="board reveal" id="board">
+          <div class="board-head">
+            <span class="board-title">Departures <small>· Career Line</small></span>
+            <span class="board-clock">NYC <b id="clock">--:--</b></span>
+          </div>
+          <div class="board-cols"><span>Period</span><span>Destination</span><span>Status</span></div>
+          <div class="board-row">
+            <span class="flap" data-text="2025-NOW">2025-NOW</span>
+            <span class="flap" data-text="MANAGER · MCDONALD'S">MANAGER · MCDONALD'S</span>
+            <span class="flap status go" data-text="PROMOTED">PROMOTED</span>
+            <p class="board-detail">Queens Village, NY — Promoted to Manager within one year. Oversee shift operations, crew performance and food-safety standards; track sales, labor costs and performance metrics.</p>
+          </div>
+          <div class="board-row">
+            <span class="flap" data-text="2024-2025">2024-2025</span>
+            <span class="flap" data-text="ASSOCIATE · ZARO'S">ASSOCIATE · ZARO'S</span>
+            <span class="flap status" data-text="ARRIVED">ARRIVED</span>
+            <p class="board-detail">Zaro's Bakery, Grand Central Terminal — Front-counter service, payments and food prep at one of NYC's busiest transit hubs.</p>
+          </div>
+          <div class="board-row">
+            <span class="flap" data-text="FEB-JUN 24">FEB-JUN 24</span>
+            <span class="flap" data-text="INTERN · COMMON POINT">INTERN · COMMON POINT</span>
+            <span class="flap status" data-text="ARRIVED">ARRIVED</span>
+            <p class="board-detail">Common Point Queens, Jamaica, NY — Managed front-office operations, client intake and records; ran service registrations via email and Google Drive.</p>
+          </div>
+          <div class="board-row">
+            <span class="flap" data-text="ONGOING">ONGOING</span>
+            <span class="flap" data-text="VOLUNTEER · ST. JOAN">VOLUNTEER · ST. JOAN</span>
+            <span class="flap status go" data-text="ON TIME">ON TIME</span>
+            <p class="board-detail">St. Joan of Arc Church, Jackson Heights — Organize fundraisers and community fairs; welcome visitors and members.</p>
+          </div>
+        </div>
+
+        <div class="edu">
+          <div class="plaque reveal" data-tilt>
+            <span class="bullet" style="--c: var(--cobalt)">🎓</span>
+            <div><small>Sep 2024 — Dec 2026 · Long Island City, NY</small><h3>LaGuardia Community College</h3><p>A.S. in Computer Science</p></div>
+          </div>
+          <div class="plaque reveal" data-tilt>
+            <span class="bullet" style="--c: var(--lilac-2)">💻</span>
+            <div><small>2026 · New York, NY</small><h3>Tech Talent Pipeline Residency</h3><p>Full Stack Web Developer</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT (3D, end of the line) ============ -->
+    <section id="contact" class="contact" data-station="Contact" data-color="mint">
+      <div class="container">
+        <div class="sign reveal"><span class="bullet" style="--c: var(--coral)">5</span><span class="sign-name">Last Stop: Your Team</span><span class="sign-dir">Contact</span></div>
+        <h2 class="title words">Let's build something <em>great</em> together.</h2>
+
+        <div class="ticket reveal" data-tilt>
+          <div class="ticket-main">
+            <div class="ticket-head">
+              <span class="bullet" style="--c: #fff; --t: var(--coral)">J</span>
+              <span>Boarding Pass · The Jonathon Line</span>
+              <span class="ticket-no">No. 001</span>
+            </div>
+            <div class="ticket-route">
+              <div><small>From</small><b>QNS</b><span>Queens, NY</span></div>
+              <div class="ticket-arrow"><span></span><i class="mini-train"></i><span></span></div>
+              <div><small>To</small><b>YOU</b><span>Your team</span></div>
+            </div>
+            <div class="ticket-fields">
+              <div><small>Passenger</small><b>Jonathon Gomes Master</b></div>
+              <div><small>Class</small><b>SWE Intern</b></div>
+              <div><small>Departs</small><b>Ready now</b></div>
+              <div class="wide"><small>Email</small><a href="mailto:jonathangomesmaster@gmail.com">jonathangomesmaster@gmail.com</a></div>
+              <div><small>Phone</small><a href="tel:+13474377688">(347) 437-7688</a></div>
+              <div><small>LinkedIn</small><a href="https://www.linkedin.com/in/jonathon-master-128684291/" target="_blank" rel="noopener">Jonathon Master ↗</a></div>
+              <div><small>GitHub</small><a href="https://github.com/Jonathon10" target="_blank" rel="noopener">@Jonathon10 ↗</a></div>
+            </div>
+          </div>
+          <div class="ticket-stub">
+            <small>Admit one recruiter</small>
+            <a class="btn primary magnetic" href="mailto:jonathangomesmaster@gmail.com">Say hello →</a>
+            <button class="btn ghost magnetic" id="copyEmail" type="button">Copy email</button>
+            <a class="stub-link" href="assets/Jonathon_Gomes_Master_Resume.pdf" download>Download résumé ↓</a>
+            <div class="barcode" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-big words">Thanks for <em>riding</em>.</p>
+      <div class="footer-inner">
+        <span><span class="bullet sm" style="--c: var(--coral)">J</span> © <span id="year"></span> Jonathon Gomes Master</span>
+        <span class="footer-links">
+          <a href="https://github.com/Jonathon10" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/jonathon-master-128684291/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:jonathangomesmaster@gmail.com">Email</a>
+        </span>
+        <a href="#home">Back to the first stop ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast">Email copied ✓</div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
