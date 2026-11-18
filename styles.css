@@ -474,3 +474,5 @@ main, .footer { position: relative; z-index: 2; }
   .reveal, .hero-in { opacity: 1; transform: none; }
   .words .w > span, .chars .c { transform: none; }
 }
+.contact .title { margin-bottom: 22px; }
+.contact-sub { position: relative; max-width: 720px; font-size: 18px; color: var(--ink-2); margin-bottom: 44px; }
